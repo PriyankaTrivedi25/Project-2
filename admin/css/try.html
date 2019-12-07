@@ -1,0 +1,111 @@
+<%@ Page Language="VB" AutoEventWireup="false" CodeFile="P_1.aspx.vb" Inherits="P_1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link href ="~/P_1.css" rel="Stylesheet" />
+    <title>Register</title>
+   
+   
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    
+    <div  class ="div1" id ="title">
+    <h2>Register</h2></div><div class ="div1" id="content">
+        <br />
+       <b> <asp:Label ID="Label1" runat="server" Text="First Name:"></asp:Label></b>
+
+        <asp:TextBox ID="TextBox1" runat="server" class="text"></asp:TextBox>
+        <br /> <br />
+      <b>   <asp:Label ID="Label2" runat="server" Text="Last Name:"></asp:Label></b>
+
+        <asp:TextBox ID="TextBox2" runat="server" class="text"></asp:TextBox>
+        <br /> <br />
+      <b>   <asp:Label ID="Label3" runat="server" Text="Email:"></asp:Label></b>
+
+        <asp:TextBox ID="TextBox3" runat="server" class="text"></asp:TextBox>
+        <br /> <br />
+     <b>    <asp:Label ID="Label4" runat="server" Text="Password:"></asp:Label></b>
+
+        <asp:TextBox ID="TextBox4" runat="server" class="text" TextMode="Password"></asp:TextBox>
+        <br /> <br />
+          <b>    <asp:Label ID="Label9" runat="server" Text="Con-Password:"></asp:Label></b>
+
+        <asp:TextBox ID="TextBox5" runat="server" class="text" TextMode="Password"></asp:TextBox>
+        <br /> <br />
+      <b>   <asp:Label ID="Label5" runat="server" Text="Date Of Birth:"></asp:Label></b>
+
+        <br /> 
+        <div id ="dob">
+            <asp:TextBox ID="TextBox9" runat="server" class="text" ></asp:TextBox>
+        <br />
+        </div>
+     <b>    <asp:Label ID="Label6" runat="server" Text="Ph No.:"></asp:Label></b>
+
+        <asp:TextBox ID="TextBox6" runat="server" class="text"></asp:TextBox>
+        <br /> <br />
+     <b>    <asp:Label ID="Label7" runat="server" Text="Address:"></asp:Label></b>
+        
+        <asp:TextBox ID="TextBox7" runat="server" class="text" TextMode="MultiLine"></asp:TextBox>
+        <br /><br /> <br /><div style="margin-top: 4px;">
+     <b>    <asp:Label ID="Label8" runat="server" Text="City:"></asp:Label> </b>
+
+        
+        <asp:TextBox ID="TextBox8" runat="server" class="text"></asp:TextBox>
+        <br /> <br /></div>
+        <asp:Button ID="Button1" runat="server" Text="Sign In" />
+    
+    </div>
+    <div class="validation1">
+   <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator1" 
+                ControlToValidate="TextBox1" runat="server" 
+                ErrorMessage="Please enter Firstname." />   </b>
+    </div>
+
+     <div class="validation">
+   <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" 
+                ControlToValidate="TextBox2" Text="This field is required!" runat="server" 
+                ErrorMessage="Please enter Lastname." />   </b>
+    </div>
+
+    <div class="validation">
+   <b> <asp:RegularExpressionValidator ID="emlvald" runat="server" 
+                ErrorMessage="Invalid E-mail id." ValidationExpression="[\w\.]+@[\w\.]+\.[a-z A-z]{2,4}" 
+                ControlToValidate="TextBox3"></asp:RegularExpressionValidator>    </b>
+    </div>
+
+     <div class="validation">
+   <b>   <asp:RequiredFieldValidator ID="RequiredFieldValidator5" 
+                ControlToValidate="TextBox4" Text="This field is required!" runat="server" 
+                ErrorMessage="Please enter Password." />     </b>
+    </div>
+     <div class="validation">
+   <b>  <asp:CompareValidator ID="camppwd" runat="server" ErrorMessage="Password do not match." ControlToCompare="TextBox4" ControlToValidate="TextBox5"> </asp:CompareValidator>   </b>
+    </div>
+     <div class="validation">
+   <b>   <asp:RangeValidator ID="dtval" runat="server" ControlToValidate="TextBox9" ErrorMessage="You are not 18 years old." MaximumValue="17/2/1998" MinimumValue="17/2/1900" Type="Date"> </asp:RangeValidator>  </b>
+    </div>
+     <div class="validation">
+   <b>   <asp:RegularExpressionValidator ID="phnval" runat="server" ErrorMessage="Please enter valid number." 
+                ValidationExpression="[0-9]{10,12}" ControlToValidate="TextBox6"></asp:RegularExpressionValidator>  </b>
+    </div>
+     <div class="validation">
+   <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator3" 
+                ControlToValidate="TextBox7" runat="server" ErrorMessage="Please enter Address." />   </b>
+    </div>
+     <div class="validation">
+   <b>   <asp:RequiredFieldValidator ID="RequiredFieldValidator4" 
+                ControlToValidate="TextBox8" Text="This field is required!" runat="server" 
+                ErrorMessage="Please enter city." />  </b>
+    </div>
+    <div id="error">
+    <b><asp:ValidationSummary ID="sumvald" runat="server" 
+            ShowSummary = "true" HeaderText="Errors:" style="color: #fff;"/></b>
+    </div>
+
+    </form>
+</body>
+</html>

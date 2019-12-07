@@ -1,0 +1,394 @@
+/*
+	Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+*/
+
+@charset 'UTF-8';
+/*drop down*/
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+.dropdown {
+
+				padding: 1.3em 1.5em;
+				letter-spacing: 1px;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: 200;
+				font-size: 1em;
+				outline: 0;
+				color: #7b7b7b;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+	body
+	{
+		background: #090909;
+	}
+
+	body,input,textarea,select
+	{
+		font-family: 'Oxygen', sans-serif;
+		font-size: 13pt;
+		line-height: 2em;
+	}
+
+	h1,h2,h3,h4,h5,h6
+	{
+		font-weight: bold;
+	}
+	
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+		{
+			color: inherit;
+			text-decoration: none;
+		}
+		
+	/* Change this to whatever font weight/color pairing is most suitable */
+	strong, b
+	{
+		font-weight: bold;
+		color: #000000;
+	}
+	
+	em, i
+	{
+		font-style: italic;
+	}
+
+	/* Don't forget to set this to something that matches the design */
+	a
+	{
+		color: white;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
+	}
+
+	sub
+	{
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+	
+	sup
+	{
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+	.loginid
+	{
+
+		margin-top: -130px;
+		text-decoration: none;
+		margin-right: 32px;
+		padding-top: 5px;
+		text-align: center;
+		float: right;
+		font-size: 35px;
+	}
+	
+	hr
+	{
+		border: 0;
+		border-top: solid 1px #ddd;
+	}
+	
+	blockquote
+	{
+		border-left: solid 0.5em #ddd;
+		padding: 1em 0 1em 2em;
+		font-style: italic;
+	}
+	
+	p, ul, ol, dl, table
+	{
+		margin-bottom: 1em;
+	}
+
+	header
+	{
+	}
+	
+		header h2
+		{
+			letter-spacing: -1px;
+			font-weight: 700;
+		}
+	
+		header .byline
+		{
+			display: block;
+			text-transform: uppercase;
+		}
+		
+	footer
+	{
+		margin-top: 1em;
+	}
+
+	br.clear
+	{
+		clear: both;
+	}
+	
+	/* Buttons */
+		
+		.button
+		{
+			position: relative;
+			display: inline-block;
+			margin-top: 2em;
+			padding: 0.8em 1.5em;
+			background: #1d1d1d;
+			border-radius: 6px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1em;
+			color: #FFF;
+			-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			cursor: pointer;
+		}
+
+			.button:hover
+			{
+				background: #141414;
+				color: #FFF !important;
+			}
+	
+
+	/* Sections/Articles */
+	
+		section,
+		article
+		{
+			margin-bottom: 3em;
+		}
+		
+		section > :last-child,
+		article > :last-child
+		{
+			margin-bottom: 0;
+		}
+
+		section:last-child,
+		article:last-child
+		{
+			margin-bottom: 0;
+		}
+
+		.row > section,
+		.row > article
+		{
+			margin-bottom: 0;
+		}
+
+	/* Images */
+
+		.image
+		{
+			display: inline-block;
+		}
+		
+			.image img
+			{
+				display: block;
+				width: 100%;
+				height: 50%
+				border-radius: 6px;
+			}
+
+			.image.featured
+			{
+				display: block;
+				width: 100%;
+				margin: 0 0 2em 0;
+			}
+			
+			.image.full
+			{
+				opacity: 1.0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				margin: 30px 0 2em 0;
+			}
+			.image.full:hover
+			{
+				opacity: 0.7;
+			}
+
+			
+			.image.left
+			{
+				float: left;
+				margin: 0 2em 2em 0;
+			}
+			
+			.image.centered
+			{
+				display: block;
+				margin: 0 0 2em 0;
+			}
+
+				.image.centered img
+				{
+					margin: 0 auto;
+					width: auto;
+				}
+
+	/* Lists */
+
+		ul.default
+		{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+			ul.default li
+			{
+				padding: 0.50em 0em;
+			}	
+		
+		ul.style1
+		{
+			font-size: 0.90em;
+		}	
+
+			ul.style1 li
+			{
+				padding: 0.80em 0em;
+				line-height: 1.8em;
+			}	
+
+			ul.style1 li img
+			{
+				float: left;
+				margin-right: 1.50em;
+				border-radius: 6px;
+			}
+			
+			ul.style1 .posted
+			{
+				display: block;
+				margin-top: 1em;
+				padding: 0.50em 0em;
+			}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		position: relative;
+		background: #ddd url(../images/building.jpg) no-repeat center;
+		background-size: cover;
+	}
+
+
+	#logo
+	{
+	}
+		.radiodiv{
+	color: white;
+	font-size: 20px;
+}
+	#nav
+	{
+		background-color: black;
+	}
+
+		#nav ul
+		{
+			margin: 0;
+		}
+	
+/*********************************************************************************/
+/* Banner                                                                        */
+/*********************************************************************************/
+
+	
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+	#main
+	{
+		position: relative;
+		background: #fff url(images/overlay.png) repeat;
+	}
+	
+	.divider
+	{
+		overflow: hidden;
+		border-top: 1px solid #dbdbdb;
+	}
+
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+	
+	
+	
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+	
+	#copyright
+	{
+		position: relative;
+		padding: 3em 0em;
+		text-align: center;
+		color: rgba(255,255,255,.2);
+	}
+	
+	#copyright .container
+	{
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: rgba(255,255,255,.3);
+	}		
